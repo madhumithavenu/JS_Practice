@@ -81,10 +81,38 @@ const age = 34;
 console.log('My mom is ' +myMom+ ' & her age is ' +age);
 
 //Unary Arthematic Operator
-var num =55;
+var num = 55;
 
 num += 10; //65 | Equivalent: num = num + 10;
+console.log(num);
 num -= 20; //45 | Equivalent: num = num - 20;
 num *= 100; //4500 | Equivalent: num = num * 100;
 num /= 50; //90 | Equivalent: num = num / 50;
 num %= 4; //2 | Equivalent: num = num % 4;
+
+//Increment and Decrement Operator
+
+let year = 1987;
+year++;
+console.log(year); //1988
+year--;
+year--;
+year--;
+console.log(year); //1985
+
+//String Interpolation
+
+let myname = 'Madhu';
+let age = 21;
+console.log(`My name is ${myname} & my age is: ${age}`);
+
+//typeof - keyword
+/* In Javascript typeof keyword used to know the type of the variable present it is not strictly typechecked language like JAVA */ 
+let foo = 'Super Man';
+console.log(typeof foo);
+foo = 1975;
+console.log(typeof foo);
+foo = 55.78;
+console.log(typeof foo);
+foo = 100 > 200;
+console.log(typeof foo);
