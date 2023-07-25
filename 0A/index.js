@@ -14,3 +14,14 @@ console.log(25.69);
 console.log('JavaScript');
 console.log('My name is Madhu! I love #JScript');
 
+console.log(5 > 6);
+console.log(5<=25);
+
+// Null -vs- Undefined
+
+var a = null;
+console.log(a);
+
+
+var b;
+console.log(b);
