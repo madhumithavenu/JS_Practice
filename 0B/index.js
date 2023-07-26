@@ -43,3 +43,23 @@ console.log(c);
 
 let condition=false;
 (condition)? (console.log("First statement")):(console.log("Second Statement"));
+
+//Switch Case
+let position =' ';
+switch(position){
+    case 'First Place':
+
+        console.log("You will get Gold Medal");
+        break;
+    case 'Second Place':
+
+        console.log("You will get Silver Medal");
+            break;
+    case 'Third Place':
+
+        console.log("You will get Bronze Medal");
+                break;
+    default:
+        console.log("Baba ji ka Thullu");
+        break;
+}
