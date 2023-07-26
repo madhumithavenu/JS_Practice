@@ -63,3 +63,43 @@ switch(position){
         console.log("Baba ji ka Thullu");
         break;
 }
+
+//Functions in JS
+/* Functions are block of code with the name(identifier),which when invoked performs certain set of operations.
+ A function can have various inputs & it will return one output. */
+
+ function sayHello(){
+    console.log("Hello Everyone");
+ }
+ function remindMe(){
+    console.log("Water the plants");
+ }
+ sayHello();
+ sayHello();
+ sayHello();
+
+ remindMe();
+ remindMe();
+
+ //Parameters and Arguments
+ /* Inputs Defined at the start of the function is known as Parameters.
+ Input values we pass while we invoke the function are known as Argyments. */
+
+ function sayHello(myName){
+    console.log("Hello Mr." + myName + "! How are you?");
+ }
+ function sayNamaste(myName){
+    console.log(`Namaste ${myName}! Welcome Home!`);
+ }
+function areaOfRectangle(length, breath){
+    let area = length * breath;
+    console.log(`Area of the Rectangle is: ${area}`);
+}
+function areaOfTriangle(b, h){
+    let area = 0.5 * b * h;
+    console.log('Area of triangle is:' +area);
+}
+sayHello('Kishan');
+sayNamaste('Seema'); //namaste Seema
+areaOfRectangle(20,10); //200
+areaOfTriangle(20,30); //300
