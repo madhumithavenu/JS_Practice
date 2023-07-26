@@ -22,3 +22,8 @@ if(flag){
 else{
     console.log("Flag is Falsy");
 }
+
+// Short-Circuit Assignment
+let myName = '';
+let person =myName || 'Nobody';
+console.log(`you know, ${person} is a good girl`);
