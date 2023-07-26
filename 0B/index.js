@@ -24,6 +24,22 @@ else{
 }
 
 // Short-Circuit Assignment
-let myName = '';
-let person =myName || 'Nobody';
-console.log(`you know, ${person} is a good girl`);
+// let myName = '';
+// let person =myName || 'Nobody';
+// console.log(`you know, ${person} is a good girl`);
+
+// let myName = 'Madhu';
+// let person =myName && 'Nobody';
+// console.log(`you know, ${person} is a good girl`);
+
+//Ternary Operator
+/* Ternary Operator checks the condition at first.
+If the condition results in true: It executes the middle (left) statement.
+If the condition results in false: It executes the last (right) statement.
+Eg: var c = (condition) ? 55 : 65; */
+
+var c = (55>7) ? 55 : 65;
+console.log(c);
+
+let condition=false;
+(condition)? (console.log("First statement")):(console.log("Second Statement"));
