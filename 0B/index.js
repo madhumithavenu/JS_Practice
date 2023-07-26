@@ -121,5 +121,5 @@ function areaOfTriangle(b=5, h=5){
 }
 
 sayNamaste();
-areaOfRectangle();
-areaOfTriangle();
+areaOfRectangle();//100
+areaOfTriangle();// 12.5
