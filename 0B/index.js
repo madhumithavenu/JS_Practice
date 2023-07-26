@@ -123,3 +123,77 @@ function areaOfTriangle(b=5, h=5){
 sayNamaste();
 areaOfRectangle();//100
 areaOfTriangle();// 12.5
+
+//Return Statement
+function areaOfRectangle(length=10, breath=10){
+    let area = length * breath;
+    console.log(`Area of the Rectangle is: ${area}`);
+}
+function areaOfTriangle(b,h){
+    let area =0.5 * b* h;
+    return area;
+}
+areaOfRectangle(15,20);
+
+var triangleArea = areaOfTriangle(10,15);
+console.log(triangleArea);
+
+//Helper Functions
+// Invoking one function inside another function is a common pratice. Such functions are called Helper Functions.
+
+function mangoWeight(count){
+    return count * 0.25;
+}
+function mangoCost(count){
+    return mangoWeight(count)*175;
+}
+
+var costOfMangos = mangoCost(25);
+console.log(`Cost of 25 mangoes is : Rs.${costOfMangos} only/-`);
+console.log("Cost of 35 mangoes is : Rs." + mangoCost(35) + "only/-");
+console.log(`Cost of 45 mangoes is : Rs.${mangoCost(45)} only/-`);
+
+//Function Expression(Anonymous Functions)
+/* Function Expression is nothing but a function object referred by a variable.
+As we dont name anything it is called Anonymous Functions
+With this we can transfer the function object to some-other variable &start invoking by that name */
+
+function areaOfTriangle(b,h){
+    let area = 0.5 *b*h;
+    return area;
+}
+var triangleArea = function(b,h){
+    let area = 0.5 * b *h;
+    return area;
+}
+console.log(`Area using Function: ${areaOfTriangle(10,15)}`);
+console.log(`Area using Function Expression: ${triangleArea(10,5)}`);
+
+//Transferring Function Expression
+
+var triangleArea = function (b,h){
+    let area = 0.5 *b*h;
+    return area;
+}
+
+var area = triangleArea;
+//triangleArea=null;
+
+console.log(`Using 'area' Variable: ${area(5,7)}`);
+console.log(`Using 'triangleArea' Variable: ${triangleArea(5,7)}`);
+
+//Arrow Head Functions
+var area = (base, height)=>{
+let area = 0.5 *base * height;
+return area;
+}
+var sayHello = ()=>{
+    console.log("Hello Everyone");
+}
+var sayNamaste = myName=>{
+    console.log(`Namaste ${myName}! Welcome Home`);
+}
+
+console.log(`Area of the Triangle is: ${area(5,8)}`);
+sayHello();
+sayNamaste("Seema");
