@@ -103,3 +103,23 @@ sayHello('Kishan');
 sayNamaste('Seema'); //namaste Seema
 areaOfRectangle(20,10); //200
 areaOfTriangle(20,30); //300
+
+//Default Arguments
+/* While Declaring a function parameters, we can even declare its default values.
+In case the user forgets to pass the arguments, default arguments will be considered for processing */
+
+function sayNamaste(myName='Random person'){
+    console.log(`Namaste ${myName}! Welcome Home!`);
+ }
+function areaOfRectangle(length=10, breath=10){
+    let area = length * breath;
+    console.log(`Area of the Rectangle is: ${area}`);
+}
+function areaOfTriangle(b=5, h=5){
+    let area = 0.5 * b * h;
+    console.log('Area of triangle is:' +area);
+}
+
+sayNamaste();
+areaOfRectangle();
+areaOfTriangle();
