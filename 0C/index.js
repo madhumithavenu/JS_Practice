@@ -89,3 +89,35 @@ console.log("New Members are :" + nato.slice(8));
 console.log(nato.slice(4,6));
 
 console.log(nato.indexOf('Germany'));
+
+//Loops in JavaScript
+for(let i = 0;i < 5; i ++){
+    console.log(i); /*0
+    1
+    2
+    3
+    4 */
+}
+for(let i = 7;i >= 0; i --){
+    console.log(i);
+}/*
+7
+6
+5
+4
+3
+2
+1
+0*/
+
+let nato1 =['USA','UK','Germany','Canada','France','Italy','Turkey'];
+for(let i = 0;i < nato1.length; i ++){
+    console.log(nato1[i]);
+} /*USA
+UK
+Germany
+Canada
+France
+Italy
+Turkey */
+
