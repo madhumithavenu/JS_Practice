@@ -18,3 +18,17 @@ let topEconomy = southeastAsia[0];
 console.log(`Richest Economy in South Asia is  ${topEconomy}!!`);
 
 console.log(`If we try to access an array out of index we get :${southeastAsia} `);
+
+//Const Arrays
+/* Const Arrays can be altered from the inside. We can add new element using Arrays.push() method.
+But we cannot assign the variable to some-other array or a random value.This will result in the error */
+
+const northAmerica =['Canada','United States of America','Mexico'];
+
+northAmerica[1] = 'USA';
+console.log(northAmerica);
+
+northAmerica.push('Panama');
+console.log(northAmerica);
+
+northAmerica = ['Colombia','Berazil'];
