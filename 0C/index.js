@@ -77,3 +77,15 @@ console.log(nato);
 nato.shift();
 nato.shift();
 console.log(nato);
+
+//Slice Arrays
+/* slice() method is used to split the array based on index.
+Arrays.indexOf('element'); is used to find the index of a particular element. */
+
+console.log(`Initial Nato was: ${nato.slice(1,7)}`);
+
+console.log("New Members are :" + nato.slice(8));
+
+console.log(nato.slice(4,6));
+
+console.log(nato.indexOf('Germany'));
