@@ -32,3 +32,13 @@ northAmerica.push('Panama');
 console.log(northAmerica);
 
 northAmerica = ['Colombia','Berazil'];
+
+//Lengtth Variable
+let southAsia = ['India','Pakistan','bangladesh'];
+let southeastAsia = ['India','Pakistan','Bangladesh','Buthan','Burma','Nepal'];
+
+console.log(southAsia.length);
+console.log(southeastAsia.length);
+
+let str = 'My name is Antony Gonsalvis';
+console.log(str.length);
