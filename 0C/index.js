@@ -58,6 +58,7 @@ console.log(nato); /* [
     'Lithuania', 'Estonia'
   ] */
 
+
 nato.pop();
 nato.pop();
 nato.pop();
@@ -68,3 +69,11 @@ console.log(nato); /*[
     'Turkey',  'Romania',
     'Greece'
   ] */
+//Unshift | Shift
+/* unshift() & shift() methods are used to add & remove elements to an array from the start (to the start)*/
+nato.unshift('Ukraine','Finland','Poland');
+console.log(nato);
+
+nato.shift();
+nato.shift();
+console.log(nato);
