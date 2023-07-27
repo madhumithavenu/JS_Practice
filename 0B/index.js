@@ -197,3 +197,19 @@ var sayNamaste = myName=>{
 console.log(`Area of the Triangle is: ${area(5,8)}`);
 sayHello();
 sayNamaste("Seema");
+
+
+var triangleArea =(base, height)=> 0.5 * base * height;
+console.log(`Area of the Triangle is: ${triangleArea(5,8)}`);
+
+//Scope
+/* {..} demarcates scope in JS.
+Variables created inside a method or a if, else if block, or the parameters inside a function(created using let keyword)live &die after the scope ends.
+Global Scope are variables created outside any scope, can be accessable till the end of the program.
+Local Scope are variables created inside those above mentioned blocks.*/
+
+//Scope of Local Variables(var & let)
+for(let j=1;j>5;j++){
+    console.log("Hello");
+}
+console.log(j);
