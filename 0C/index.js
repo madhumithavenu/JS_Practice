@@ -42,3 +42,29 @@ console.log(southeastAsia.length);
 
 let str = 'My name is Antony Gonsalvis';
 console.log(str.length);
+
+//Push| Pop
+/* push() & pop() methods are used to add & remove elements to an array from the end(to the end). */
+
+let nato =['USA','UK','Germany','Canada','France','Italy','Turkey'];
+
+nato.push('Romania','Greece','latvia','Lithuania','Estonia');
+console.log(nato); /* [
+    'USA',       'UK',
+    'Germany',   'Canada',
+    'France',    'Italy',
+    'Turkey',    'Romania',
+    'Greece',    'latvia',
+    'Lithuania', 'Estonia'
+  ] */
+
+nato.pop();
+nato.pop();
+nato.pop();
+console.log(nato); /*[
+    'USA',     'UK',
+    'Germany', 'Canada',
+    'France',  'Italy',
+    'Turkey',  'Romania',
+    'Greece'
+  ] */
