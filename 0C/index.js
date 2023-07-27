@@ -120,4 +120,8 @@ Canada
 France
 Italy
 Turkey */
-
+let nato2 =['USA','UK','Germany','Canada','France','Italy','Turkey'];
+for(let i = 0;i < nato2.length; i ++){
+    console.log(nato2[i]);
+    console.log(`Long Live ${nato2[i]}!!`);
+}
