@@ -91,4 +91,4 @@ const logic = function (num){
     return num *num;
 }
 const squares = numbers.map(logic);
-console.log(squares);
+console.log(squares);//[ 1, 4, 9, 16, 25, 49 ]
