@@ -46,3 +46,20 @@ const add2 = (x,y)=>{
 sum1(add2, 10,15)
 // Sum of the two numbers: 25
 // Finished adding Two Numbers
+
+/* Iterators
+They are methods used on arrays to work on the same.
+Some of the common iterators are forEach(), map(), Filter() */
+
+const fruitsSalad = ['apple','banana','orange','kiwi','custard'];
+
+let itrFruits = function(fruit){
+    console.log(`10 gms of ${fruit}`);
+}
+
+fruitsSalad.forEach(itrFruits);
+// 10 gms of apple
+// 10 gms of banana
+// 10 gms of orange
+// 10 gms of kiwi
+// 10 gms of custard
