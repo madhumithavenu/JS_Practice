@@ -51,15 +51,22 @@ sum1(add2, 10,15)
 They are methods used on arrays to work on the same.
 Some of the common iterators are forEach(), map(), Filter() */
 
-const fruitsSalad = ['apple','banana','orange','kiwi','custard'];
+// const fruitsSalad = ['apple','banana','orange','kiwi','custard'];
 
-let itrFruits = function(fruit){
-    console.log(`10 gms of ${fruit}`);
-}
+// let itrFruits = function(fruit){
+//     console.log(`10 gms of ${fruit}`);
+// }
 
-fruitsSalad.forEach(itrFruits);
+// fruitsSalad.forEach(itrFruits);
 // 10 gms of apple
 // 10 gms of banana
 // 10 gms of orange
 // 10 gms of kiwi
 // 10 gms of custard
+
+//mentos Zindagi
+const fruitsSalad = ['apple','banana','orange','kiwi','custard'];
+
+fruitsSalad.forEach(function(fruit){
+    console.log(`10 gms of ${fruit}`);
+});
