@@ -175,6 +175,8 @@ const num = mixedArray.filter(item=>{
 });
 console.log(num);
 
+
+//Sort Function
 let number = [2,1,3,4,5,6,7,8];
 number.sort();
 console.log(number);
@@ -187,3 +189,27 @@ console.log(fruits1);
 let fruits2 = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
 fruits2.reduce('kiwi');
 console.log(fruits2);
+
+//reduce
+const number1 = [2,1,3,4,5,6,7,8];
+number1.reduce();
+console.log(number1);
+
+const numbers5 = [2,3,4];
+
+const sums = numbers5.reduce((num)=> 3 +num);
+console.log(sums);
+
+const mixedArray1 =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
+const logic =function (item){
+    return(typeof item === 'string')
+}
+const numb = mixedArray1.some(logic);
+console.log(numb);
+
+let fruit1 = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+
+let fruitNum1 = fruit1.some((fruit1)=>{
+    return fruit1 === 'banana';
+});
+console.log(fruitNum1);
