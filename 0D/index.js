@@ -139,15 +139,15 @@ the callback function (logic method) for the .filter() method should return true
 // const num = mixedArray.filter(logic);
 // console.log(num);
 
-const mixedArray =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
-// const num = mixedArray.filter(function(item){
-//     return(typeof item === 'number')? true : false
-// });
-// const num = mixedArray.filter(item=>{
-//     return(typeof item === 'number')? true : false
-// });
-const num = mixedArray.filter(item=>(typeof item === 'number')? true : false);
-console.log(num);
+// const mixedArray =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
+// // const num = mixedArray.filter(function(item){
+// //     return(typeof item === 'number')? true : false
+// // });
+// // const num = mixedArray.filter(item=>{
+// //     return(typeof item === 'number')? true : false
+// // });
+// const num = mixedArray.filter(item=>(typeof item === 'number')? true : false);
+// console.log(num);
 
 //Find Index Method
 /* findIndex() method retrieves the index of first element of the array which matches with the true Condition in the logic. */
@@ -157,7 +157,7 @@ let fruits = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
 // let fruitNum = fruits.findIndex((fruit)=>{
 //     return fruit === 'grapes';
 // });
-console.log(fruitNum);//2
+// console.log(fruitNum);//2
 let fruitNum = fruits.findIndex(fruit=>fruit === 'apple');
 console.log(fruitNum);
 
@@ -165,3 +165,25 @@ let startsWithD = fruits.findIndex((fruit)=>{
     return fruit[0] === 'd';
 });
 console.log(startsWithD);//3
+
+const mixedArray =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
+const num = mixedArray.filter(function(item){
+    return(typeof item === 'number')? true : false
+});
+const num = mixedArray.filter(item=>{
+    return(typeof item === 'number')? true : false
+});
+console.log(num);
+
+let number = [2,1,3,4,5,6,7,8];
+number.sort();
+console.log(number);
+
+
+let fruits1 = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+fruits1.sort();
+console.log(fruits1);
+
+let fruits2 = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+fruits2.reduce('kiwi');
+console.log(fruits2);
