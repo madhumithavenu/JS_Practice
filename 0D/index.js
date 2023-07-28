@@ -108,7 +108,26 @@ const numbers = [1, 2, 3, 4, 5,7];
 // const squares = numbers.map((num)=>{
 //     return num *num;
 // });
-const squares = numbers.map(num=>{
-    return num *num;
-});
+// const squares = numbers.map(num=>{
+//     return num *num;
+// });
+
+const squares = numbers.map(num=> num *num);
 console.log(squares);
+
+//Filtered Method
+/* Filter method returns a new after filtering the elements from existing array.
+.filter() returns an array of elements after filtering out certain elements from the original array.
+the callback function (logic method) for the .filter() method should return true or false. */
+
+const mixedArray =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25'];
+const logic =function (item){
+    if (typeof item === 'number'){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+const num = mixedArray.filter(logic);
+console.log(num);//[ 5.4, 8, 9.5 ]
