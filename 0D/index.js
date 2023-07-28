@@ -197,7 +197,7 @@ console.log(number1);
 
 const numbers5 = [2,3,4];
 
-const sums = numbers5.reduce((num)=> 3 +num);
+const sums = numbers5.reduce((a,b)=> a + b);
 console.log(sums);
 
 const mixedArray1 =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
