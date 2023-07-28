@@ -132,9 +132,16 @@ the callback function (logic method) for the .filter() method should return true
 // const num = mixedArray.filter(logic);
 // console.log(num);//[ 5.4, 8, 9.5 ]
 
+// const mixedArray =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
+// const logic =function (item){
+//     return(typeof item === 'string')? true : false
+// }
+// const num = mixedArray.filter(logic);
+// console.log(num);
+
 const mixedArray =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
-const logic =function (item){
+const num = mixedArray.filter(function(item){
     return(typeof item === 'number')? true : false
-}
-const num = mixedArray.filter(logic);
+});
+
 console.log(num);
