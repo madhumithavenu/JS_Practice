@@ -85,10 +85,30 @@ fruitsSalad.forEach((fruit)=>{
 /*forEach() pops out an element of an array & it operates on it.
 map() works in the same WebAssembly, but it returns a new array with added logic.*/
 
+// const numbers = [1, 2, 3, 4, 5,7];
+
+// const logic = function (num){
+//     return num *num;
+// }
+// const squares = numbers.map(logic);
+// console.log(squares);//[ 1, 4, 9, 16, 25, 49 ]
+
+// const numbers = [1, 2, 3, 4, 5,7];
+
+// const squares = numbers.map(function(num){
+//     return num *num;
+// });
+
+// console.log(squares);
+
+//Mentos Zindagi with Arrow Function
+
 const numbers = [1, 2, 3, 4, 5,7];
 
-const logic = function (num){
+// const squares = numbers.map((num)=>{
+//     return num *num;
+// });
+const squares = numbers.map(num=>{
     return num *num;
-}
-const squares = numbers.map(logic);
-console.log(squares);//[ 1, 4, 9, 16, 25, 49 ]
+});
+console.log(squares);
