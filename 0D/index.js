@@ -65,8 +65,15 @@ Some of the common iterators are forEach(), map(), Filter() */
 // 10 gms of custard
 
 //mentos Zindagi
+// const fruitsSalad = ['apple','banana','orange','kiwi','custard'];
+
+// fruitsSalad.forEach(function(fruit){
+//     console.log(`10 gms of ${fruit}`);
+// });
+
+//Mentos Zindagi with Arrow Function
 const fruitsSalad = ['apple','banana','orange','kiwi','custard'];
 
-fruitsSalad.forEach(function(fruit){
+fruitsSalad.forEach((fruit)=>{
     console.log(`10 gms of ${fruit}`);
 });
