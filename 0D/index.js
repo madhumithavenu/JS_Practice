@@ -154,10 +154,12 @@ console.log(num);
 
 let fruits = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
 
-let fruitNum = fruits.findIndex((fruit)=>{
-    return fruit === 'banana';
-});
+// let fruitNum = fruits.findIndex((fruit)=>{
+//     return fruit === 'grapes';
+// });
 console.log(fruitNum);//2
+let fruitNum = fruits.findIndex(fruit=>fruit === 'apple');
+console.log(fruitNum);
 
 let startsWithD = fruits.findIndex((fruit)=>{
     return fruit[0] === 'd';
