@@ -32,4 +32,17 @@ const sum = (param)=>{
 const add1 = (x,y)=>{
     console.log(`Sum of the two numbers: ${x + y}`);
 }
-sum(add1);
+sum(add1); //Sum of the two numbers: 11
+           //Finished adding two numbers
+
+//Mentos Zindagi with a Twist
+const sum1 = (param, a, b)=>{
+    param(a,b);
+    console.log(`Finished adding Two Numbers`);
+}
+const add2 = (x,y)=>{
+    console.log(`Sum of the two numbers: ${x + y}`);
+}
+sum1(add2, 10,15)
+// Sum of the two numbers: 25
+// Finished adding Two Numbers
