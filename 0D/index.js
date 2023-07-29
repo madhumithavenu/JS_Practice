@@ -1,12 +1,12 @@
 //Higher Order Functions
-const addTwoNumbers =(a, b)=>{
+const addTwoNumbers = (a, b) => {
     console.log(`Sum of the two numbers: ${a + b}`);
 }
-addTwoNumbers(7,8);
+addTwoNumbers(7, 8);
 
 let addMethod = addTwoNumbers;
 
-addTwoNumbers(5 ,6);// Invoking Method using Variable 1
+addTwoNumbers(5, 6);// Invoking Method using Variable 1
 addMethod(5, 6); //Invoking Method  using Variable 2
 
 //Prnting Function Name
@@ -16,7 +16,7 @@ console.log(addTwoNumbers.name);//addTwoNumbers
 console.log(addMethod.name);//addTwoNumbers
 
 //call Back Functions (Aam Zindagi)
-const add = (x,y)=>{
+const add = (x, y) => {
     console.log(`Sum of the two numbers: ${x + y}`);
 }
 add(5, 6);
@@ -25,25 +25,25 @@ add(5, 6);
 // }
 
 //(mentos Zindagi)
-const sum = (param)=>{
-    param(5,6);
+const sum = (param) => {
+    param(5, 6);
     console.log(`Finished adding two numbers`);
 }
-const add1 = (x,y)=>{
+const add1 = (x, y) => {
     console.log(`Sum of the two numbers: ${x + y}`);
 }
 sum(add1); //Sum of the two numbers: 11
-           //Finished adding two numbers
+//Finished adding two numbers
 
 //Mentos Zindagi with a Twist
-const sum1 = (param, a, b)=>{
-    param(a,b);
+const sum1 = (param, a, b) => {
+    param(a, b);
     console.log(`Finished adding Two Numbers`);
 }
-const add2 = (x,y)=>{
+const add2 = (x, y) => {
     console.log(`Sum of the two numbers: ${x + y}`);
 }
-sum1(add2, 10,15)
+sum1(add2, 10, 15)
 // Sum of the two numbers: 25
 // Finished adding Two Numbers
 
@@ -72,9 +72,9 @@ Some of the common iterators are forEach(), map(), Filter() */
 // });
 
 //Mentos Zindagi with Arrow Function
-const fruitsSalad = ['apple','banana','orange','kiwi','custard'];
+const fruitsSalad = ['apple', 'banana', 'orange', 'kiwi', 'custard'];
 
-fruitsSalad.forEach((fruit)=>{
+fruitsSalad.forEach((fruit) => {
     console.log(`10 gms of ${fruit}`);
 });
 // fruitsSalad.forEach(fruit=>{
@@ -103,7 +103,7 @@ map() works in the same WebAssembly, but it returns a new array with added logic
 
 //Mentos Zindagi with Arrow Function
 
-const numbers = [1, 2, 3, 4, 5,7];
+const numbers = [1, 2, 3, 4, 5, 7];
 
 // const squares = numbers.map((num)=>{
 //     return num *num;
@@ -112,7 +112,7 @@ const numbers = [1, 2, 3, 4, 5,7];
 //     return num *num;
 // });
 
-const squares = numbers.map(num=> num *num);
+const squares = numbers.map(num => num * num);
 console.log(squares);
 
 //Filtered Method
@@ -152,64 +152,80 @@ the callback function (logic method) for the .filter() method should return true
 //Find Index Method
 /* findIndex() method retrieves the index of first element of the array which matches with the true Condition in the logic. */
 
-let fruits = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+let fruits = ['apple', 'pineapple', 'banana', 'dragon-fruit', 'orange', 'kiwi'];
 
 // let fruitNum = fruits.findIndex((fruit)=>{
 //     return fruit === 'grapes';
 // });
 // console.log(fruitNum);//2
-let fruitNum = fruits.findIndex(fruit=>fruit === 'apple');
+let fruitNum = fruits.findIndex(fruit => fruit === 'apple');
 console.log(fruitNum);
 
-let startsWithD = fruits.findIndex((fruit)=>{
+let startsWithD = fruits.findIndex((fruit) => {
     return fruit[0] === 'd';
 });
 console.log(startsWithD);//3
 
-const mixedArray =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
-const num = mixedArray.filter(function(item){
-    return(typeof item === 'number')? true : false
+const mixedArray = ['apple', 'banana', 5.4, 8, 'kiwi', '3.147', 9.5, '25', true, false];
+const num3 = mixedArray.filter(function (item) {
+    return (typeof item === 'number') ? true : false
 });
-const num = mixedArray.filter(item=>{
-    return(typeof item === 'number')? true : false
+const num = mixedArray.filter(item => {
+    return (typeof item === 'number') ? true : false
 });
 console.log(num);
 
 
 //Sort Function
-let number = [2,1,3,4,5,6,7,8];
+let number = [2, 1, 3, 4, 5, 6, 7, 8];
 number.sort();
 console.log(number);
 
 
-let fruits1 = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+let fruits1 = ['apple', 'pineapple', 'banana', 'dragon-fruit', 'orange', 'kiwi'];
 fruits1.sort();
 console.log(fruits1);
 
-let fruits2 = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+let fruits2 = ['apple', 'pineapple', 'banana', 'dragon-fruit', 'orange', 'kiwi'];
 fruits2.reduce('kiwi');
 console.log(fruits2);
 
 //reduce
-const number1 = [2,1,3,4,5,6,7,8];
+const number1 = [2, 1, 3, 4, 5, 6, 7, 8];
 number1.reduce();
 console.log(number1);
 
-const numbers5 = [2,3,4];
+const numbers5 = [2, 3, 4];
 
-const sums = numbers5.reduce((a,b)=> a + b);
+const sums = numbers5.reduce((a, b) => a + b);
 console.log(sums);
 
-const mixedArray1 =['apple','banana',5.4,8,'kiwi','3.147',9.5,'25',true,false];
-const logic =function (item){
-    return(typeof item === 'string')
+const mixedArray1 = ['apple', 'banana', 5.4, 8, 'kiwi', '3.147', 9.5, '25', true, false];
+const logic = function (item) {
+    return (typeof item === 'string')
 }
 const numb = mixedArray1.some(logic);
 console.log(numb);
 
-let fruit1 = ['apple','pineapple','banana','dragon-fruit','orange','kiwi'];
+let fruit1 = ['apple', 'pineapple', 'banana', 'dragon-fruit', 'orange', 'kiwi'];
 
-let fruitNum1 = fruit1.some((fruit1)=>{
+let fruitNum1 = fruit1.some((fruit1) => {
     return fruit1 === 'banana';
 });
 console.log(fruitNum1);
+
+
+const months = ['March', 'Jan', 'Feb', 'May', 'Dec', 'Jun'];
+
+console.log(months[0].charCodeAt() - months[1].charCodeAt());
+
+months.sort((a, b) => {
+    if (b[0] !== a[0]) {
+        return b[0].charCodeAt() - a[0].charCodeAt();
+    }
+    else {
+        return b[1].charCodeAt() - a[1].charCodeAt();
+    }
+});
+console.log(months);
+// Expected output: Array ["Dec", "Feb", "Jan", "March"]
