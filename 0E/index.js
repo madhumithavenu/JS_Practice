@@ -205,10 +205,40 @@ console.log(`Dog Breed Before: ${dog4.breed}`);
 console.log(`Dog Breed Before: ${dog4.weight}`);
 console.log(`Dog Breed Before: ${dog4.color}`);
 
-dog.breed='German Sheperd';
-dog.weight=23;
-dog.color='Blackish Brown';
+dog4.breed='German Sheperd';
+dog4.weight=23;
+dog4.color='Blackish Brown';
 
 console.log(`Dog Breed After: ${dog4.breed}`);
 console.log(`Dog Breed After: ${dog4.weight}`);
 console.log(`Dog Breed After: ${dog4.color}`);
+/*Dog Breed Before: Golden Retrevier
+Dog Breed Before: Golden Retrevier
+Dog Breed Before: Orange
+Dog Breed After: German Sheperd
+Dog Breed After: German Sheperd
+Dog Breed After: Blackish Brown
+ */
+//Factory
+const dogFactory = (breed, weight, color, violent)=>{
+    return{
+        _breed: 'Golden Retrevier',
+        color: 'Orange',
+        _weight: 18,
+        _violent: violent,
+
+        showInfo(){
+            console.log(`My dog is a ${this.breed},
+            whose color is ${this.color}
+            & it weights ${this.weight} kilos`);
+
+            this._violent ? console.log("It is Ferocius \n") : console.log("It is Sweet \n");;
+        }
+
+    }
+}
+let d1 = dogFactory('Labrador',18,'Orange',false);
+d1.showInfo();
+
+let d2 = dogFactory('German Sheaperd',22,'black',true)
+d2.showInfo();
