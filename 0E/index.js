@@ -122,3 +122,22 @@ let dog1 ={
 }
 dog1.hungry();
 console.log(dog1.getInfo());
+/*wagging the tail
+My dog is a Golden Retrevier, is Orange in color &weights 18 kilos.*/
+
+//Wrong way of Representing Methods
+let dog2 ={
+    breed: 'Golden Retrevier',
+    color: 'Orange',
+    weight: 18,
+
+    hungry:()=>{
+        console.log("Wagging the tail");
+    },
+    getInfo:()=>{
+        return `My dog is a ${this.breed}, is ${this.color} in color &weights ${this.weight} kilos`;
+    
+    }
+}
+dog2.hungry();
+console.log(dog2.getInfo());
