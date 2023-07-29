@@ -29,3 +29,37 @@ console.log(baby.cat);//kitten
 console.log(baby['horse baby']);//fawn
 console.log(baby['baby duck']);//duckling
 console.log(baby.lion);//cub
+
+baby.cow ='Calf';
+baby['baby Monkey']= 'Infants';
+
+delete baby.sheep;
+delete baby['baby duck'];
+
+console.log(baby);
+/*{
+    cat: 'kitten',
+    dog: 'puppy',
+    kangaroo: 'zoey',
+    'horse baby': 'fawn',
+    lion: 'cub',
+    cow: 'Calf',
+    'baby Monkey': 'Infants'
+  }*/
+
+//Function Expression as Properties
+const actions ={
+    sayHello: function(){
+        console.log("Hello Everyone");
+    },
+    sayNamaste: function(person){
+        console.log(`Namaste ${person}, How are you?`);
+    },
+    add: function(num1 , num2){
+        return num1 +num2;
+    }
+}
+actions.sayHello();
+actions.sayNamaste('Madhu');
+console.log(`Sum of two numbers is : ${actions.add(10,15)}`);
+  
