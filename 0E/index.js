@@ -174,3 +174,41 @@ console.log(dog3.showInfo());
 Orange
 Wagging the tail
 My dog is a Golden Retrevier, is Orange in color &weights 18 kilos*/
+
+//Set Methods
+let dog4 ={
+    _breed: 'Golden Retrevier',
+    color: 'Orange',
+    _weight: 18,
+    get breed(){
+        return this._breed;
+    },
+    get weight(){
+        return this._breed;
+    },
+    set breed(newBreed){
+        if(typeof newBreed ==='string'){
+            this._breed=newBreed;
+        }
+    },
+    set weight(num){
+        if(typeof num ==='number' && num > 0){
+            this._weight=num;
+        }
+        else{
+            console.log("Please Enter a valid Number above 0");
+        }
+    }
+
+}
+console.log(`Dog Breed Before: ${dog4.breed}`);
+console.log(`Dog Breed Before: ${dog4.weight}`);
+console.log(`Dog Breed Before: ${dog4.color}`);
+
+dog.breed='German Sheperd';
+dog.weight=23;
+dog.color='Blackish Brown';
+
+console.log(`Dog Breed After: ${dog4.breed}`);
+console.log(`Dog Breed After: ${dog4.weight}`);
+console.log(`Dog Breed After: ${dog4.color}`);
