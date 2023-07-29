@@ -129,7 +129,7 @@ My dog is a Golden Retrevier, is Orange in color &weights 18 kilos.*/
 let dog2 ={
     breed: 'Golden Retrevier',
     color: 'Orange',
-    weight: 18,
+    weight1: 18,
 
     hungry:()=>{
         console.log("Wagging the tail");
@@ -141,3 +141,36 @@ let dog2 ={
 }
 dog2.hungry();
 console.log(dog2.getInfo());
+/*Wagging the tail
+My dog is a undefined, is undefined in color &weights undefined kilos. 
+Arrow Function cannot be used.*/
+
+//Get Methods
+let dog3 ={
+    _breed: 'Golden Retrevier',
+    color: 'Orange',
+    _weight: 18,
+    get breed(){
+        return this._breed;
+    },
+    get weight(){
+        return this._weight
+    },
+
+    hungry(){
+        console.log("Wagging the tail");
+    },
+    showInfo(){
+        return `My dog is a ${this.breed}, is ${this.color} in color &weights ${this.weight} kilos`;
+    }
+}
+console.log(dog3.breed);
+console.log(dog3.weight);
+console.log(dog3.color);
+dog3.hungry();
+console.log(dog3.showInfo());
+/* Golden Retrevier
+18
+Orange
+Wagging the tail
+My dog is a Golden Retrevier, is Orange in color &weights 18 kilos*/
