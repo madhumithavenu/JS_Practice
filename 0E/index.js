@@ -90,6 +90,7 @@ console.log(profile);
 addChild(profile);
 console.log(profile);
 
+//Iterate using for..in
 let baby1 = {
     cat: 'kitten',
     dog: 'puppy',
@@ -103,3 +104,21 @@ let baby1 = {
 for (let key in baby1){
     console.log(`Child of ${key} is called: ${baby1[key]}`);
 }
+
+//Hybrid objects (Advanced Objects)
+
+let dog1 ={
+    breed: 'Golden Retrevier',
+    color: 'Orange',
+    weight: 18,
+
+    hungry(){
+        console.log("Wagging the tail");
+    },
+    getInfo(){
+        return `My dog is a ${this.breed}, is ${this.color} in color &weights ${this.weight} kilos`;
+    
+    }
+}
+dog1.hungry();
+console.log(dog1.getInfo());
