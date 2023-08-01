@@ -1,34 +1,51 @@
- /*let personOne ={
-    firstname: 'Madhu',
-    lastname: 'Mitha',
+/*let personOne ={
+   firstname: 'Madhu',
+   lastname: 'Mitha',
 
-    printName(){
-        console.log(this.firstname+ "" + this.lastname);
-    }
+   printName(){
+       console.log(this.firstname+ "" + this.lastname);
+   }
 }
 
 let personTwo ={
-    firstname: "Sachin",
-    lastname: "Tendulkar",
-    printName(){
-        console.log(this.firstname+ "" + this.lastname);
-    }
+   firstname: "Sachin",
+   lastname: "Tendulkar",
+   printName(){
+       console.log(this.firstname+ "" + this.lastname);
+   }
 }
 personOne.printName();//MadhuMitha
 personTwo.printName();//SachinTendulkar */
 
 //Function Barrowing
-let personOne ={
-    firstname: 'Madhu',
-    lastname: 'Mitha',
+// let personOne ={
+//     firstname: 'Madhu',
+//     lastname: 'Mitha',
 
-    printName(){
-        console.log(this.firstname+ "" + this.lastname);
-    }
+//     printName(){
+//         console.log(this.firstname+ "" + this.lastname);
+//     }
+// }
+
+// let personTwo ={
+//     firstname: "Sachin",
+//     lastname: "Tendulkar",
+// }
+// personOne.printName.call(personTwo);//SachinTendulkar
+
+// Approach 2(Aam Zindagi)
+let printName = function (obj) { 
+    console.log(obj.firstname+ " "+obj.lastname);
 }
 
-let personTwo ={
+let personOne = {
+    firstname: 'Madhu',
+    lastname: 'Mitha',
+}
+
+let personTwo = {
     firstname: "Sachin",
     lastname: "Tendulkar",
 }
-personOne.printName.call(personTwo);
+printName(personOne);
+printName(personTwo);
