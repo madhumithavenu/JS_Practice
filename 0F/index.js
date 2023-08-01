@@ -51,7 +51,7 @@ personTwo.printName();//SachinTendulkar */
 // printName(personTwo);
 
 //Approach 2(Mentos Zindagi)
-let printName = function () { 
+ /* let printName = function () { 
     console.log(this.firstname+ " "+this.lastname);
 }
 
@@ -65,4 +65,21 @@ let personTwo = {
     lastname: "Tendulkar",
 }
 printName.call(personOne);
-printName.call(personTwo);
+printName.call(personTwo); */
+
+//Approach 3(Mentos Zindagi)
+let personOne = {
+    firstname: 'Madhu',
+    lastname: 'Mitha',
+}
+
+let personTwo = {
+    firstname: "Sachin",
+    lastname: "Tendulkar",
+}
+let printName = function(hometown ,state){
+    console.log(` \n ${this.firstname} ${this.lastname}
+    From ${hometown}, ${state}`);
+}
+printName.call(personOne, 'Bengaluru', 'karnataka');
+printName.call(personTwo,'Mumbai');
