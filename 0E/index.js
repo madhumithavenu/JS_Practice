@@ -322,3 +322,19 @@ console.log(modEnt);
     
 //     }
 // }
+
+//Spread Operator
+const profile1={
+    firstName : 'Balaji',
+    lastName :'KR'
+};
+const address ={
+    country:'India',
+    city: 'Bengaluru'
+};
+const user ={
+    ...profile1,
+    gender:'male',
+    ...address
+}
+console.log(user);
