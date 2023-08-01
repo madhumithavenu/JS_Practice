@@ -85,7 +85,7 @@ printName.call(personOne, 'Bengaluru', 'karnataka');
 printName.call(personTwo,'Mumbai'); */
 
 //Using Apply Method 
-let personOne = {
+ /* let personOne = {
     firstname: 'Madhu',
     lastname: 'Mitha',
 }
@@ -100,3 +100,38 @@ let printName = function(hometown ,state){
 }
 printName.call(personOne, ['Bengaluru', 'karnataka']);
 printName.call(personTwo,['Mumbai']);
+Madhu Mitha
+    From Bengaluru,karnataka, undefined
+ 
+ Sachin Tendulkar
+    From Mumbai, undefined */
+
+/* call & Apply
+call () method is using 'pass by reference' as we pass the object on which the method is to be called(with some additional parameters: comma seperated)
+apply() method is using 'pass by reference' as we pass the object on which the method is to be caled(with some additional parameter as an array.) 
+
+Bind Method
+bind() method returns a Function, but binds the function to the object & arguments we are passing (and keeps it ready.)
+To invoke it , we have to exclusively use the call() method (if of the same line.)
+-or- invoke it by using a parenthesis in the consecutive line,by accepting the return of the function object(returned by the bind method).*/
+
+let personOne = {
+    firstname: 'Madhu',
+    lastname: 'Mitha',
+}
+
+let personTwo = {
+    firstname: "Sachin",
+    lastname: "Tendulkar",
+}
+let printName = function(hometown ,state){
+    console.log(` \n ${this.firstname} ${this.lastname}
+    From ${hometown}, ${state}`);
+}
+let f1 = printName.bind(personOne, 'Bengaluru', 'karnataka');
+let f2 = printName.bind(personTwo,'Mumbai');
+
+console.log(f1);
+console.log(f2);
+f1();
+f2();
