@@ -1,6 +1,8 @@
-import { celsiusToFahrenheit, fahrenhietToCelsius } from "./converters-es6.js";
+ import { celsiusToFahrenheit, fahrenhietToCelsius } from "./converters-es6.js";
 import { milliToCenti, centiToMeter } from "./converters-es6.js";
-import nano from './converters-es6.js'
+import nano from './converters-es6.js'; 
+
+// import * as resource from './converters-es6.js';
 
 const buttonElement = document.getElementById('button');
 buttonElement.addEventListener('click',clickMe);
