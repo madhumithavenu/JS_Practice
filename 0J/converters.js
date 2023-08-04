@@ -5,5 +5,5 @@ function celsiusToFahrenheit(celsius){
 module.exports.celsiusToFahrenheit = celsiusToFahrenheit;
 
 module.exports.fahrenhietToCelsius = function (fahrenheit){
-    return (fahrenheit - 32) * (5 / 9;)
+    return (fahrenheit - 32) * (5 / 9);
 };
