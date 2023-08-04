@@ -20,3 +20,16 @@ export function celsiusToFahrenheit(celsius) {
 export function fahrenhietToCelsius(fahrenheit) {
     return (fahrenheit - 32) * (5 / 9);
 }
+
+const milliToCenti = (millimeter)=>{
+    return millimeter / 10;
+}
+
+const centiToMeter = (centimeter)=>{
+    return centimeter * 100;
+}
+const nanoMeter = 0.000000001;
+
+export default nanoMeter;
+
+export{ milliToCenti, centiToMeter};
