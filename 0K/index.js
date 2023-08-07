@@ -102,7 +102,38 @@ function goToHell(pros){
         console.log(keys);
         setTimeout((key,objs)=>{
             console.log(objs[key]);
-        },3000, 'kishen',objs)
+
+            setTimeout((sub)=>{
+                console.log(`Age of Kishen is: ${sub.age}`);
+                setTimeout((sub)=>{
+                    console.log(`Hobbies of Kishen are: ${sub.hobbies}`);
+                },4000,sub);
+            },2000,objs['kishen']);
+        },3000, 'kishen',objs);
     },2000,pros);
 }
  goToHell(profiles);
+
+ /* Promises in JS
+ Promises in JS are used to handle Asynchronous Operations.
+ A promise is an object that keep track about whether a certain event has happened already or not.
+ It also determines what will happen after the event.
+ Promises has three stages: Pending, Completed, Rejected. */
+
+ const bringChocolates = function(){
+    let didIBringTheChocolates = false;
+    console.log("Getting ready to go to market");
+    console.log("Booking a cab to the store");
+    console.log("Selecting the chocolate");
+    console.log("Watching the payment");
+
+    didIBringTheChocolates = true;
+
+    if(didIBringTheChocolates==true){
+        console.log(`Kishen says: Thank you appa!!`);
+    }
+    else{
+        console.log(`Kishen is crying: I hate you!!`);
+    }
+ }
+ bringChocolates();
