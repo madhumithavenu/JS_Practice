@@ -87,10 +87,22 @@ const profiles = {
 
 //Stage-1
 
+/* function goToHell(pros){
+    setTimeout((objs)=>{
+        let keys = Object.keys(objs);
+        console.log(keys);
+    },2000,pros);
+}
+ goToHell(profiles); */
+
+//Stage-2
 function goToHell(pros){
     setTimeout((objs)=>{
         let keys = Object.keys(objs);
         console.log(keys);
+        setTimeout((key,objs)=>{
+            console.log(objs[key]);
+        },3000, 'kishen',objs)
     },2000,pros);
 }
  goToHell(profiles);
