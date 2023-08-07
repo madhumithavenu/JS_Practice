@@ -240,5 +240,4 @@ function error(msg){
     //Callback Function for Reject
     console.log(msg);
 }
-
 goToHell.then(displayKeys).catch(error);//Envoking the promise
