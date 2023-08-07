@@ -122,12 +122,12 @@ function goToHell(pros){
 
  const bringChocolates = function(){
     let didIBringTheChocolates = false;
-    console.log("Getting ready to go to market");
-    console.log("Booking a cab to the store");
-    console.log("Selecting the chocolate");
-    console.log("Watching the payment");
+    // console.log("Getting ready to go to market");
+    // console.log("Booking a cab to the store");
+    // console.log("Selecting the chocolate");
+    // console.log("Watching the payment");
 
-    didIBringTheChocolates = true;
+    didIBringTheChocolates = false;
 
     if(didIBringTheChocolates==true){
         console.log(`Kishen says: Thank you appa!!`);
