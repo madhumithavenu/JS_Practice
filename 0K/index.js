@@ -231,13 +231,25 @@ function keysPromiseFunction(resolve,reject){
     },2000, profiles);
 }
 
+function profilePromiseFunction(resolve,reject){
+    setTimeout((key,objs)=>{
+        (objs.hasOwnProperty(key)) ? resolve({key, objs}) : reject(`Object by name ${key} doesn't exists`);
+
+    }, 3000,'kishen', profiles);
+}
+
 function displayKeys(keys){
     //Callback Function for Resolve
     console.log(keys);
+    return new Promise(profilePromiseFunction);
+}
+
+function displayProfiles({key, objs}){
+    console.log(objs[key]);
 }
 
 function error(msg){
     //Callback Function for Reject
     console.log(msg);
 }
-goToHell.then(displayKeys).catch(error);//Envoking the promise
+goToHell.then(displayKeys).then(displayProfiles).catch(error);//Envoking the promise
