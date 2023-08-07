@@ -51,39 +51,39 @@ In Asynchronous programming language like a JS: Callback function are absolutely
 
 */
 
-const profiles = {
-    'balaji': {
-        fullname: 'Balaji KR',
-        age: 35,
-        married: true,
-        hobbies: ['Defence', 'Finance', 'Foreign Affairs']
-    },
-    'seema': {
-        fullname: 'Seema H',
-        age: 30,
-        married: true,
-        hobbies: ['Cooking', 'Painting', 'Art & Crafts']
-    },
-    'kishen': {
-        fullname: 'Kishen KB',
-        age: 3,
-        married: false,
-        hobbies: ['football', 'Video games']
-    },
-    'rajeev': {
-        fullname: 'Rajeevalochana KV',
-        age: 70,
-        married: true,
-        hobbies: ['Watching TV']
-    }
-}
+// const profiles = {
+//     'balaji': {
+//         fullname: 'Balaji KR',
+//         age: 35,
+//         married: true,
+//         hobbies: ['Defence', 'Finance', 'Foreign Affairs']
+//     },
+//     'seema': {
+//         fullname: 'Seema H',
+//         age: 30,
+//         married: true,
+//         hobbies: ['Cooking', 'Painting', 'Art & Crafts']
+//     },
+//     'kishen': {
+//         fullname: 'Kishen KB',
+//         age: 3,
+//         married: false,
+//         hobbies: ['football', 'Video games']
+//     },
+//     'rajeev': {
+//         fullname: 'Rajeevalochana KV',
+//         age: 70,
+//         married: true,
+//         hobbies: ['Watching TV']
+//     }
+// }
 
 
-/* Requirement:
-1. Display keys of all profile after 2 seconds.
-2. Display profile of 'kishen' after 3 seconds (from one).
-3. Display kishen's age after 2 seconds(from two).
-4. Display kishen's Hobbies after 4 seconds (from three). */
+// /* Requirement:
+// 1. Display keys of all profile after 2 seconds.
+// 2. Display profile of 'kishen' after 3 seconds (from one).
+// 3. Display kishen's age after 2 seconds(from two).
+// 4. Display kishen's Hobbies after 4 seconds (from three). */
 
 //Stage-1
 
@@ -183,3 +183,62 @@ function cryInCorner(){
 
 let iPromiseToBringChocolates = new Promise(bringChocolates);
 iPromiseToBringChocolates.then(eatTheChocolates).catch(cryInCorner);
+
+
+const profiles = {
+    'balaji': {
+        fullname: 'Balaji KR',
+        age: 35,
+        married: true,
+        hobbies: ['Defence', 'Finance', 'Foreign Affairs']
+    },
+    'seema': {
+        fullname: 'Seema H',
+        age: 30,
+        married: true,
+        hobbies: ['Cooking', 'Painting', 'Art & Crafts']
+    },
+    'kishen': {
+        fullname: 'Kishen KB',
+        age: 3,
+        married: false,
+        hobbies: ['football', 'Video games']
+    },
+    'rajeev': {
+        fullname: 'Rajeevalochana KV',
+        age: 70,
+        married: true,
+        hobbies: ['Watching TV']
+    }
+}
+
+
+/* Requirement:
+1. Display keys of all profile after 2 seconds.
+2. Display profile of 'kishen' after 3 seconds (from one).
+3. Display kishen's age after 2 seconds(from two).
+4. Display kishen's Hobbies after 4 seconds (from three). */
+
+let goToHell = new Promise(keysPromiseFunction);//Creating new Promise
+
+function keysPromiseFunction(resolve,reject){
+    //Callback Function for Promises
+    setTimeout((objs)=>{
+        let keys = Object.keys(objs);
+        (keys.length > 0)?
+        resolve(keys) :
+        reject(`Error while Parsing keys from Object`);
+    },2000, profiles);
+}
+
+function displayKeys(keys){
+    //Callback Function for Resolve
+    console.log(keys);
+}
+
+function error(msg){
+    //Callback Function for Reject
+    console.log(msg);
+}
+
+goToHell.then(displayKeys).catch(error);//Envoking the promise
