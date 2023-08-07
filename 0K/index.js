@@ -84,3 +84,13 @@ const profiles = {
 2. Display profile of 'kishen' after 3 seconds (from one).
 3. Display kishen's age after 2 seconds(from two).
 4. Display kishen's Hobbies after 4 seconds (from three). */
+
+//Stage-1
+
+function goToHell(pros){
+    setTimeout((objs)=>{
+        let keys = Object.keys(objs);
+        console.log(keys);
+    },2000,pros);
+}
+ goToHell(profiles);
