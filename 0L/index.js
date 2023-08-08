@@ -11,4 +11,4 @@ async function balaji(){
 }
 
 let b = balaji();
-console.log(b);
+console.log(b); // Returning a promise
