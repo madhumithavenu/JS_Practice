@@ -13,10 +13,7 @@
 
 </body>
 <script>
-    function processData(response) {
-        // console.log(response);
-        return response.json();
-    }
+
 
     function printData(data) {
         // console.log(data);
@@ -32,7 +29,7 @@
     // let dataObject = processData(res);
     // printData(dataObject); //Synchronous style is leading us to error
 
-    fetch('https://randomuser.me/api/').then(processData).then(printData);
+    fetch('https://randomuser.me/api/').then(response => response.json()).then(printData);
 
 
 </script>
