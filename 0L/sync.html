@@ -13,19 +13,16 @@
 
 </body>
 <script>
+    async function getData() {
+        let response = await fetch('https://randomuser.me/api/');
 
+        let data = await response.json();
+        let element = document.getElementById("info");
+        element.innerHTML = "<center><h1>Name:" + data.results[0].name.first + " " + data.results[0].name.last + "</h1></center>";
 
-
-    // let res = fetchData();
-    // let dataObject = processData(res);
-    // printData(dataObject); //Synchronous style is leading us to error
-
-    fetch('https://randomuser.me/api/').then(response => response.json()).then(data => {
-        let fullname = data.results[0].name.first + " " + data.results[0].name.last;
-        console.log(`Name of a random person : ${fullname}`);
-    });
-
-
+       
+    }
+    getData();
 </script>
 
 </html>
