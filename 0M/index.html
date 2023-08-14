@@ -5,16 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        button{
-            background-color: #4caf50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-style: 16px;
-        }
         button#blue-pill{
             background-color: #304df7;
             border: 2 px solid #304df7;
@@ -54,11 +44,16 @@
         function sayHello(){
             alert("Hello User");
         }
+        function changeText(){
+            let h1Element = document.getElementById("heading");
+            h1Element.innerHTML = "Welcome to the World of MATRIX";
+
+            console.log(h1Element);
+            console.log(h1Element.innerHTML);
+        }
     </script>
-    <h1 id="heading">Welcome to my website</h1>
-    <button onclick="sayHello()">Click Me</button>
-    <br> <br> <br>
-    <button id="blue-pill">Click Me</button>
-    <button id="red-pill">Click Me</button>
+    <h1 id="heading">Welcome to my Website</h1>
+    <button id="blue-pill" onclick="sayHello()">Click Me</button>
+    <button id="red-pill" onclick="changeText()">Click Me</button>
 </body>
 </html>
