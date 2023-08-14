@@ -12,3 +12,7 @@ async function balaji(){
 
 let b = balaji();
 console.log(b); // Returning a promise
+
+let res;
+res = Boolean (" ");
+console.log(res);
