@@ -16,6 +16,11 @@
             font-style: 16px;
             transition-duration: 0.4s;
         }
+        button#blue-pill:hover{
+            background-color: #ffffff;
+            color: #304df7;
+            border: 2 px solid #304df7;
+        }
         button#red-pill{
             background-color: #e90000;
             border: 2 px solid #e90000;
@@ -27,11 +32,7 @@
             font-style: 16px;
             transition-duration: 0.4s;
         }
-        button#blue-pill:hover{
-            background-color: #ffffff;
-            color: #304df7;
-            border: 2 px solid #304df7;
-        }
+        
         button#red-pill:hover{
             background-color: #ffffff;
             color: #e90000;
@@ -40,20 +41,26 @@
     </style>
 </head>
 <body>
-    <script>
-        function sayHello(){
-            alert("Hello User");
-        }
-        function changeText(){
-            let h1Element = document.getElementById("heading");
-            h1Element.innerHTML = "Welcome to the World of MATRIX";
-
-            console.log(h1Element);
-            console.log(h1Element.innerHTML);
-        }
-    </script>
+    
     <h1 id="heading">Welcome to my Website</h1>
-    <button id="blue-pill" onclick="sayHello()">Click Me</button>
+    <button id="blue-pill">Click Me</button>
     <button id="red-pill" onclick="changeText()">Click Me</button>
 </body>
+<script>
+    function sayHello(){
+        alert("Hello User");
+    }
+    function changeText(){
+        let h1Element = document.getElementById("heading");
+        h1Element.innerHTML = "Welcome to the World of MATRIX";
+
+        console.log(h1Element);
+        console.log(h1Element.innerHTML);
+    }
+
+    let buttonElement = document.getElementById("blue-pill");
+    buttonElement.addEventListener('click',sayHello);
+    // buttonElement.removeEventListener('click',sayHello());
+
+</script>
 </html>
