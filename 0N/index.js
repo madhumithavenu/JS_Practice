@@ -61,6 +61,3 @@ let admin = {
     isAdmin: true
 };
 
-alert(admin.fullName);
-
-admin.fullName = 'Alice Cooper';
