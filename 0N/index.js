@@ -61,3 +61,18 @@ let admin = {
     isAdmin: true
 };
 
+let father = {
+    name: "Sanjay",
+    city: "Shimla",
+    showInfo: function(){
+        console.log(`My name is ${this.name} from ${this.city}`);
+    }
+    /* showInfo(){
+        console.log(`My name is ${this.name} from ${this.city}`);
+    }*/
+}
+
+let son = {
+    name: "Sagan"
+}
+son.__proto__ = father;
