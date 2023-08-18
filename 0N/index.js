@@ -30,17 +30,17 @@ let longEar = {    //EXAMPLE 3
 }; */
 
 
-let animal ={
-    eats: true,
-    walk() {
-        //This method won't be used by rabbit .
-    }
-};
-let rabbit = {
-    __proto__: animal
-};
+// let animal ={
+//     eats: true,
+//     walk() {
+//         //This method won't be used by rabbit .
+//     }
+// };
+// let rabbit = {
+//     __proto__: animal
+// };
 
-rabbit.walk = function(){
+ /* rabbit.walk = function(){
     alert("Rabbit! Bounce-bounce!");
 };
 
@@ -69,10 +69,25 @@ let father = {
     }
     /* showInfo(){
         console.log(`My name is ${this.name} from ${this.city}`);
-    }*/
+    }
 }
 
 let son = {
     name: "Sagan"
 }
-son.__proto__ = father;
+son.__proto__ = father;    
+*/
+
+
+
+let animal ={
+    eats: true
+};
+let rabbit = {
+    jumps: true,
+    __proto__: animal
+};
+
+let cow = {
+
+};
