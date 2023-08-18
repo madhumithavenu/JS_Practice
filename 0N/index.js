@@ -88,6 +88,13 @@ let rabbit = {
     __proto__: animal
 };
 
-let cow = {
 
-};
+// let animal ={
+//     eats: true,
+//     walk() {
+//         //This method won't be used by rabbit .
+//     }
+// };
+// let rabbit = {
+//     __proto__: animal
+// };
