@@ -33,7 +33,7 @@ let longEar = {    //EXAMPLE 3
 let animal ={
     eats: true,
     walk() {
-        
+        //This method won't be used by rabbit .
     }
 };
 let rabbit = {
@@ -43,3 +43,24 @@ let rabbit = {
 rabbit.walk = function(){
     alert("Rabbit! Bounce-bounce!");
 };
+
+let user = {
+    name: 'John',
+    surname: 'Smith',
+
+    set fullName(value){
+        [this.name, this.surname] = value.split(" ");
+    },
+    get fullName(){
+        return `${this.name} ${this.surname}`;
+    }
+};
+
+let admin = {
+    __proto__: user,
+    isAdmin: true
+};
+
+alert(admin.fullName);
+
+admin.fullName = 'Alice Cooper';
