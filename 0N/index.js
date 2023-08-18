@@ -13,6 +13,17 @@
 
 //EXAMPLE 2
 
+// let animal ={
+//     eats: true,
+//     walk() {
+//         alert("Animal walk");
+//     }
+// };
+// let rabbit = {
+//     jumps: true,
+//     __proto__: animal
+// };
+
 let animal ={
     eats: true,
     walk() {
@@ -24,5 +35,8 @@ let rabbit = {
     __proto__: animal
 };
 
-
+let longEar = {
+    earlength: 10,
+    __proto__: rabbit
+};
 
