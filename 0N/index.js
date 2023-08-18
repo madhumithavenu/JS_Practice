@@ -89,12 +89,14 @@ let rabbit = {
 };
 
 
-// let animal ={
-//     eats: true,
-//     walk() {
-//         //This method won't be used by rabbit .
-//     }
-// };
-// let rabbit = {
-//     __proto__: animal
-// };
+
+for(let prop in rabbit) {
+    let isOwn = rabbit.hasOwnProperty(prop);
+
+if (isOwn) {
+    alert(`Our: ${prop}`);
+} else{
+    alert(`Inherited: ${prop}`);
+}
+}
+undefined
